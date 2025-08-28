@@ -9,16 +9,16 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-white">
-    <nav class="flex justify-between items-center px-6 py-4">
+    <!----- nav bar ----->
+    <nav class="flex justify-between items-center px-6 md:px-6 py-4">
         <div class="flex items-center gap-3">
             <img src="assets/logo.png" class="h-[45px]" alt="">
             <h3 class="font-bold text-[#006747]">Emergency<br>Service</h3>
         </div>
         <div class="flex items-center gap-4">
             <div class="bg-[#E9FFF0] flex items-center justify-center rounded-2xl px-4 py-2 gap-2">
-                <h3 class="font-bold ">0 </h3>
-                <img src="assets/heart.png" class="h-[22px]" alt="">
-            </div>
+                <img src="assets/heart.png" class="h-6" alt="">
+                <span id="heart-click-count" class="font-bold text-black">0</span>            </div>
             <div class="bg-[#E9FFF0] flex items-center justify-center rounded-2xl px-4 py-2 gap-2">
                 <h3 class="font-bold">100 </h3>
                 <img src="assets/coin.png" class="h-[22px]" alt="">
@@ -29,21 +29,21 @@
         </div>
     </nav>
 
-    <!--------- Next ---------->
-    <section class="bg-[#006747] flex flex-col justify-between items-center px-6 md:px-10 py-10 text-center text-white">
+    <!--------Hero Section------->
+    <section class="bg-gradient-to-r from-[#004629] via-[#4CAF50] to-[#004629] flex flex-col justify-between items-center px-6 md:px-10 py-10 md:py-12 text-center text-white">
         <img src="assets/logo-dark.png" class="h-[90px]" alt="">
         <h1 class="text-white font-bold text-2xl p-2">Emergency Service Directory</h1>
         <p class="font-semibold">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
     </section>
 
-        <!--------- Next ---------->
-  <section class="flex justify-between gap-8 px-6 md:px-10 py-10">
-        <div class="grid grid-cols-3 gap-6">
+    <!---------Left Part--------->
+  <section class="flex flex-col lg:flex-row justify-between gap-6 px-4 md:px-10 py-10 bg-[#E9FFF0]">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
             <div class="bg-base-100 w-70 shadow-sm rounded-2xl">
                 <div class="card-body">
                     <div class="flex justify-between items-center">
                         <img src="assets/emergency.png" class="h-12 w-12" alt="">
-                        <img src="assets/heart2.png" class="h-7 w-7" alt="">
+                        <img src="assets/heart2.png" class="card-heart h-7 w-7 cursor-pointer" alt="">
                     </div>
                     <h3 class="card-title font-bold text-base">National Emergency Number</h3>
                     <p class="text-gray-600">National Emergency</p>
@@ -60,7 +60,7 @@
                 <div class="card-body">
                     <div class="flex justify-between items-center">
                         <img src="assets/police.png" class="h-12 w-12" alt="">
-                        <img src="assets/heart2.png" class="h-7 w-7" alt="">
+                        <img src="assets/heart2.png" class="card-heart h-7 w-7 cursor-pointer" alt="">
                     </div>
                     <h3 class="card-title font-bold text-base">Police Helpline Number</h3>
                     <p class="text-gray-600">Police</p>
@@ -76,7 +76,7 @@
                 <div class="card-body">
                     <div class="flex justify-between items-center">
                         <img src="assets/fire-service.png" class="h-12 w-12" alt="">
-                        <img src="assets/heart2.png" class="h-7 w-7" alt="">
+                        <img src="assets/heart2.png" class="card-heart h-7 w-7 cursor-pointer" alt="">
                     </div>
                     <h3 class="card-title font-bold text-base">Fire Service Number</h3>
                     <p class="text-gray-600">Fire Service</p>
@@ -92,7 +92,7 @@
                 <div class="card-body">
                     <div class="flex justify-between items-center">
                         <img src="assets/ambulance.png" class="h-12 w-12" alt="">
-                        <img src="assets/heart2.png" class="h-7 w-7" alt="">
+                        <img src="assets/heart2.png" class="card-heart h-7 w-7 cursor-pointer" alt="">
                     </div>
                     <h3 class="card-title font-bold text-base">Ambulance Service</h3>
                     <p class="text-gray-600">Ambulance</p>
@@ -108,7 +108,7 @@
                 <div class="card-body">
                     <div class="flex justify-between items-center">
                         <img src="assets/emergency.png" class="h-12 w-12" alt="">
-                        <img src="assets/heart2.png" class="h-7 w-7" alt="">
+                        <img src="assets/heart2.png" class="card-heart h-7 w-7 cursor-pointer" alt="">
                     </div>
                     <h3 class="card-title font-bold text-base">Women & Child Helpline</h3>
                     <p class="text-gray-600">Women & Child Helpline</p>
@@ -124,7 +124,7 @@
                 <div class="card-body">
                     <div class="flex justify-between items-center">
                         <img src="assets/emergency.png" class="h-12 w-12" alt="">
-                        <img src="assets/heart2.png" class="h-7 w-7" alt="">
+                        <img src="assets/heart2.png" class="card-heart h-7 w-7 cursor-pointer" alt="">
                     </div>
                     <h3 class="card-title font-bold text-base">Anti-Corruption Helpline</h3>
                     <p class="text-gray-600">Anti-Corruption</p>
@@ -140,7 +140,7 @@
                 <div class="card-body">
                     <div class="flex justify-between items-center">
                         <img src="assets/emergency.png" class="h-12 w-12" alt="">
-                        <img src="assets/heart2.png" class="h-7 w-7" alt="">
+                        <img src="assets/heart2.png" class="card-heart h-7 w-7 cursor-pointer" alt="">
                     </div>
                     <h3 class="card-title font-bold text-base">Electricity Helpline</h3>
                     <p class="text-gray-600">Electricity Outage</p>
@@ -156,7 +156,7 @@
                 <div class="card-body">
                     <div class="flex justify-between items-center">
                         <img src="assets/emergency.png" class="h-12 w-12" alt="">
-                        <img src="assets/heart2.png" class="h-7 w-7" alt="">
+                        <img src="assets/heart2.png" class="card-heart h-7 w-7 cursor-pointer" alt="">
                     </div>
                     <h3 class="card-title font-bold text-base">Brac Helpline</h3>
                     <p class="text-gray-600">Brac</p>
@@ -172,7 +172,7 @@
                 <div class="card-body">
                     <div class="flex justify-between items-center">
                         <img src="assets/emergency.png" class="h-12 w-12" alt="">
-                        <img src="assets/heart2.png" class="h-7 w-7" alt="">
+                        <img src="assets/heart2.png" class="card-heart h-7 w-7 cursor-pointer" alt="">
                     </div>
                     <h3 class="card-title font-bold text-base">Bangladesh Railway Helpline</h3>
                     <p class="text-gray-600">Bangladesh Railway</p>
@@ -186,7 +186,8 @@
             </div>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-md w-full lg:w-[300px] space-y-3">
+            <!---------Right Part--------->
+        <div class="bg-white p-4 md:p-6 rounded-2xl shadow-md w-full lg:w-[300px] space-y-3">
             <div class="flex justify-between items-center mb-4">
                 <div class="flex items-center gap-2">
                     <h2 class="font-semibold text-lg"><i class="fa-regular fa-clock"></i> Call History</h2>
@@ -216,5 +217,6 @@
             </div>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>   
 </html>
