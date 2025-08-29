@@ -13,19 +13,44 @@ let totalCoins = 100;
 const navCoinCount = document.getElementById('coin-count');
 const cardCoins = document.querySelectorAll('.card-coin');
 
+const historyContainer = document.querySelector(".call-history");
+const clearButton = document.getElementById("clear-history");
+
 navCoinCount.textContent = totalCoins;
 
-cardCoins.forEach(function(img) {
-  img.onclick = function () {
+cardCoins.forEach(function(button) {
+  button.onclick = function () {
     if (totalCoins >= 20) {
       totalCoins -= 20;
       navCoinCount.textContent = totalCoins;
-      alert("You spent 20 coins!");
+    
+      const card = button.closest(".card-body");
+      const serviceName = card.querySelector("h3").innerText;
+      const number = card.querySelector("h2").innerText;
+      const time = new Date().toLocaleTimeString();
+      
+      const item = document.createElement("div");
+      item.className =
+        "flex justify-between items-center bg-gray-50 px-4 py-3 rounded-xl";
+      item.innerHTML = `
+        <div>
+          <p class="font-medium">${serviceName}</p>
+          <p class="text-sm text-gray-500">${number}</p>
+        </div>
+        <span class="text-sm text-gray-500">${time}</span>
+      `;
+      historyContainer.appendChild(item);
+        alert("📞 Calling " + serviceName + " (" + number + ")");
     } else {
-      alert("You don't have enough coins to call");
+      alert("You don't have enough coins to call!");
     }
   };
 });
+
+clearButton.addEventListener("click", function(){
+  historyContainer.innerHTML = "";
+})
+
 
 let totalCopy = 0;
 const copyCount = document.getElementById('copy-count');
